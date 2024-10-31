@@ -1,5 +1,7 @@
-package lab07_4.ex04.service;
-import lab07_4.ex04.model.Student;
+package lab07_5.ex05.service;
+
+import lab07_5.ex05.model.Student;
+
 import java.util.List;
 
 public interface StudentService {

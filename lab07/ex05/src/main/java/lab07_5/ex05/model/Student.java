@@ -1,4 +1,4 @@
-package lab07_4.ex04.model;
+package lab07_5.ex05.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

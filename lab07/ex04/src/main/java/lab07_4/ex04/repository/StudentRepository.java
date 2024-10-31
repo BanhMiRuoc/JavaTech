@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface StudentRepository extends CrudRepository<Student, Integer> {
-    public List<Student> findStudentsGreaterThanAge(Integer age);
-    public int totalEqualIeltsScore(double score);
-    public List<Student> findStudentsContainsWord(String word);
+    List<Student> findByAgeGreaterThanEqual(int age);
+    int countStudentByIelts(double ielts);
+    List<Student> findByNameContaining(String name);
 }

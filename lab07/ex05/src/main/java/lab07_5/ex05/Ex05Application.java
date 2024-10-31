@@ -1,22 +1,21 @@
-package lab07_4.ex04;
+package lab07_5.ex05;
 
-import lab07_4.ex04.model.Student;
-import lab07_4.ex04.service.StudentService;
+import lab07_5.ex05.model.Student;
+import lab07_5.ex05.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 import java.util.List;
 
 @SpringBootApplication
-public class Ex04Application implements CommandLineRunner {
+public class Ex05Application implements CommandLineRunner {
 	@Autowired
 	private StudentService studentService;
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ex04Application.class, args);
+		SpringApplication.run(Ex05Application.class, args);
 	}
 	private void showStudents() {
 		List<Student> students = (List<Student>) this.studentService.getStudents();
@@ -33,7 +32,7 @@ public class Ex04Application implements CommandLineRunner {
 
 		System.out.println("List student greater than 20 years old: ");
 		int age = 20;
-        List<Student> studentsEqualAge = this.studentService.findByAge(age);
+		List<Student> studentsEqualAge = this.studentService.findByAge(age);
 		for (Student student : studentsEqualAge) {
 			System.out.println(student);
 		}
